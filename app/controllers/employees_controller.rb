@@ -11,11 +11,9 @@ class EmployeesController < ApplicationController
     def create
         @employee = Employee.new(employee_params)
         if @employee.valid?
-            flash[:message] = "Successfully saved new employee"
             @employee.save
             redirect_to employee_path(@employee)
         else
-            flash[:message] = @employee.errors.full_messages
             render :new
         end
     end
@@ -27,14 +25,12 @@ class EmployeesController < ApplicationController
     end
 
     #assign_attributes
-    
+
     def update
         @employee = Employee.update(employee_params)
         if @employee.valid?
-            flash[:message] = "Successfully changed employee details"
             redirect_to employee_path(@employee)
         else 
-            flash[:message] = @employee.errors.full_messages
             render :edit
         end
     end
