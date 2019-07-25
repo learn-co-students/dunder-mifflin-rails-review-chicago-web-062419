@@ -1,10 +1,20 @@
 class EmployeesController < ApplicationController
-  def home
+  def index
     @employees = Employee.all
   end
 
   def show
     find_employee
+  end
+
+  def new
+    @employee = Employee.new
+    @dogs = Dog.all
+  end
+
+  def create
+    @employee = Employee.create(employee_params)
+    redirect_to @employee
   end
 
   def edit
