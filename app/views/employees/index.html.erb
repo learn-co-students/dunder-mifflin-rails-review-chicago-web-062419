@@ -1,0 +1,11 @@
+<h1>Dunder Mifflin Employee Directory</h1>
+
+<h2>Employees:</h2>
+<%@employees.each do |employee|%>
+<li><%=link_to employee.full_name, employee_path(employee)%></li>
+<%end%>
+
+<br>
+<br>
+
+<%=link_to "Create New Employee", new_employee_path%>
