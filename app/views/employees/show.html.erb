@@ -1,0 +1,9 @@
+<h1>Employee Page</h1> 
+
+    <%= @employee.first_name %> <br> 
+    <%= @employee.alias %> <br>
+    <%= @employee.title %> <br> 
+    <%= @employee.office %> <br> 
+    <img src= <%= @employee.img_url %>><br> 
+
+<%= link_to "Back To Employees Please!", employees_path %>
