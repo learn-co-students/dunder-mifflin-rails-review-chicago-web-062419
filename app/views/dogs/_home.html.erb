@@ -1,0 +1,22 @@
+
+<font face="Alien League II">
+<%= form_for(@dog) do |f| %>
+  <strong><p align="right"><%= f.label :name %></p><//strong>
+  <p align="right"><%= f.text_field :name%></p>
+
+  <p align="right"><%= f.label :breed %></p>
+  <p align="right"><%= f.text_field :breed %></p>
+
+  <p align="right"><%= f.label :age %></p>
+  <p align="right"><%= f.text_field :age%></p>
+
+  <p align="right"><%= f.submit %></p>
+
+<% end %>
+
+<h3>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to "To Dog List", { :action => "index" }, :method => :get %></p>
+<%= link_to "To Employee List", employees_path %>
+</h3>
+</font>

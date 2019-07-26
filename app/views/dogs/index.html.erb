@@ -1,0 +1,14 @@
+<font face="Alien League II"><h2><p align="left">Dogs List</p></h2>
+<% @dogs.each do |dog| %>
+  <%= link_to(dog) do %>
+    <h3><p align="right"><%= dog.name %> <-- Click it!</p></h3>
+  <% end %>
+<% end %>
+
+<h3>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to "To Dog List", { :action => "index" }, :method => :get %></p>
+<%= link_to "To Employee List", employees_path %>
+</h3>
+
+</font>

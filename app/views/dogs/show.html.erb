@@ -1,0 +1,17 @@
+<font face="Alien League II">
+<h2><p align="left">This dog has:</p></h2>
+<h3><p align="right">a name: <align="right" style="color:red"><%= @dog.name %>
+<p align="right">a breed: <align="right" style="color:red"><%= @dog.breed %></p>
+<p align="right">an age: <align="right" style="color:red"><%= @dog.age %></p>
+<p align="right">and an impresive collection of humans:</p></h3></font>
+<% @dog.employees.each do |employee| %>
+    <font face="Alien League II"><h3><p align="right" style="color:red"><%= employee.full_name %></p></h3></font>
+<% end %>
+<font face="Alien League II">
+<h3>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to "To Dog List", { :action => "index" }, :method => :get %></p>
+<%= link_to "To Employee List", employees_path %>
+<p style="color:red"><%= link_to "Edit",{ :action => "edit" }, :method => :get %></p>
+</h3>
+</font>
