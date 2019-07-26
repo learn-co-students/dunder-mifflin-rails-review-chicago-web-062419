@@ -1,0 +1,33 @@
+<font face="Alien League II">
+<%= form_for(@employee) do |f| %>
+  <p align="right"><strong><%= f.label :first_name %><//strong></p>
+  <p align="right"><%= f.text_field :first_name%></p>
+
+  <p align="right"><%= f.label :last_name %></p>
+  <p align="right"><%= f.text_field :last_name %></p>
+
+  <p align="right"><%= f.label :alias %></p>
+  <p align="right"><%= f.text_field :alias%></p>
+
+  <p align="right"><%= f.label :title %></p>
+  <p align="right"><%= f.text_field :title %></p>
+
+  <p align="right"><%= f.label :office %></p>
+  <p align="right"><%= f.text_field :office %></p>
+
+  <p align="right"><%= f.label :image_address %></p>
+  <p align="right"><%= f.text_field :img_url %></p>
+
+  <p align="right"><%= f.label :belongs_to%></p>
+  <p align="right"><%= f.collection_select( :dog_id, Dog.all, :id, :name )  %></p>
+
+  <p align="right"><%= f.submit %></p>
+
+<% end %>
+
+<h3>
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to "To employee list", { :action => "index" }, :method => :get %></p>
+<%= link_to "To Dog List", dogs_path %>
+</h3>
+</font>

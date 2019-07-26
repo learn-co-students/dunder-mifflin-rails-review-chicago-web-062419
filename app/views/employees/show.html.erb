@@ -1,0 +1,13 @@
+<font face="Alien League II">
+<h2>Proudly presenting your employee:</h2>
+<h3>
+<p align="right" style="color:red"><%= @employee.full_name %> <align="right" style="color:black">aka: <align="right" style="color:red"><%= @employee.alias %></p>
+<p align="right">This human is a <%= @employee.title.downcase%> at <%= @employee.office %>, and belongs to:</p>
+<p align="right" style="color:red"><%= link_to @employee.dog.name, dog_path(@employee.dog_id) %></p>
+<p align="right"><a href="<%= @employee.img_url %>"><img src="<%= @employee.img_url %>"></a></p>
+<p style="color:red"><%= link_to 'Back', :back %></p>
+<p style="color:red"><%= link_to "To employee list", { :action => "index" }, :method => :get %></p>
+<p style="color:red"><%= link_to "To Dog List", dogs_path %></p>
+<p style="color:red"><%= link_to "Edit",{ :action => "edit" }, :method => :get %></p>
+</h3>
+</font>
