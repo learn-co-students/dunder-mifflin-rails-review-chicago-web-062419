@@ -1,0 +1,21 @@
+<h1> <%= @dog.name %></h1>
+<h3> <%= @dog.breed %></h3>
+<h3> <%= @dog.age %></h3>
+
+<%# Works but isn't using the association fully. %>
+    <%# <% Employee.all.map do |e|%> 
+        <%# <% if e.dog_id == @dog.id %> 
+            <%# <p> <%= "#{e.first_name} #{e.last_name}" %> </p> 
+        <%# <% end %> 
+    <%# <% end %> 
+
+<%# Using the association below is better. %>
+
+<% @dog.employees.each do |employee|  %>
+    <h3> <%= link_to employee.first_name, employee_path(employee)%> </h3> <br>
+    <img src= <%= employee.img_url %> width="50%" height="50%" > <br>
+<% end %>
+<br>
+<%= link_to 'All Dogs', dogs_path %>
+
+
