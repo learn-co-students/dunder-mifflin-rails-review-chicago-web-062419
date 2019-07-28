@@ -1,0 +1,19 @@
+<h1> <%= "#{@employee.first_name} #{@employee.last_name}" %></h1>
+<h3> Alias: <%= @employee.alias %></h3>
+<h3> Title: <%= @employee.title %></h3>
+<h3> Office: <%= @employee.office %></h3>
+<h3> Dog: <%= @employee.dog.name %></h3>
+<img src= <%= @employee.img_url %> width="50%" height="50%">
+<h5> <%= link_to 'Remove Employee', employee_path,
+    method: :delete,
+    data: {confirm: 'Fo Real?'} %> </h5>
+<br>
+
+
+
+<%= link_to 'All Employees', employees_path %>
+
+
+
+
+

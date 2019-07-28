@@ -1,0 +1,7 @@
+<h1> Dogs </h1>
+
+<% @sorted_dogs.each do |dog| %>
+    <p> <%= link_to dog.name, dog_path(dog) %></p>
+<% end %>
+<br>
+<%= link_to 'Go to Employees', employees_path %>
