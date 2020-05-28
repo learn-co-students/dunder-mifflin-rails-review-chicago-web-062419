@@ -1,0 +1,7 @@
+<h1> <%=@employee.first_name%> <%=@employee.last_name%></h1>
+<h2>Also known as: <%= @employee.alias%> </h2>
+<h2>Title: <%= @employee.title%></h2>
+<h2>Office: <%= @employee.office%></h2>
+<img src="<%=@employee.img_url%>" width="400" height="400" alt="Profile Pic">
+
+<h3>Belongs To: <%=@employee.dog.name%></h3>
